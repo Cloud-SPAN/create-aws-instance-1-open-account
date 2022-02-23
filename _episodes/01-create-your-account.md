@@ -32,19 +32,19 @@ These are the main steps you will follow to open your AWS account:
 
 4. Confirm your identity through a phone call or SMS message.
 
-5. Select support plan (`Basic`) and complete sign-up.
+5. Select support plan (**Basic**) and complete sign-up.
 
 6. Login to your AWS account.
 
 ## 1. Go to the AWS sign-up page and enter your email and password
 
-Go to the **sign-up** page by clicking on this link [AWS sign-up](https://portal.aws.amazon.com/billing/signup#/start) --- for convenience, right click on the link and, in the menu that pops up, left click on `Open link in new window`; you can switch between this browser window and the sign-up page window to be opened by pressing the keys Alt-Tab simultaneously. 
+Go to the **sign-up** page by clicking on this link [AWS sign-up](https://portal.aws.amazon.com/billing/signup#/start) --- for convenience, right click on the link and, in the menu that pops up, left click on **Open link in new window**; you can switch between this browser window and the sign-up page window to be opened by pressing the keys Alt-Tab simultaneously. 
 
 You will need to enter your email and password and a name for your account --- you can change the name of your account later.
 
 ![Caption.](../fig/open-acc04-signup-page-filled.PNG.jpg "The Sign up for AWS page showing the boxes for your email address, password and account name")
 
-> New accounts
+> ## New accounts
 > 1. new accounts are all granted the one-year Free Tier (message on the left).
 > 2. the name of an account helps to identify the account once the user is logged in, as it is not uncommon for AWS users to have more than one AWS account.
 {: .callout}
@@ -84,7 +84,7 @@ Please select SMS message or phone call, enter your phone number and the charact
 
 ## 5. Select support plan (**Basic**) and complete sign-up.
 
-You must now select a support plan. Select the `Basic support` plan and click **Complete sign-up**.  The Basic support plan is free and you don't need more if this is your first AWS account.
+You must now select a support plan. Select the **Basic support** plan and click **Complete sign-up**.  The Basic support plan is free and you don't need more if this is your first AWS account.
 
 ![Caption.](../fig/open-acc16signup-page-select-support-plan3.png "The support pan selection page showing the Basic Support - Free option beling selected")
 
@@ -106,23 +106,23 @@ From the congratulations page click **Go to the AWS Management Console** where y
 
 ![Caption.](../fig/using-acc01-signingin-as-root-page.PNG.jpg "The sign in page showing the options to choose Root user or IAM user")
 
-> Types of user
-> 1. The login page will give you the option to login either as the `Root user` or as an `IAM user` --- IAM stands for Identity Access Managment. 
-> 2. The `Root user` account is for the owner of the account who "performs tasks requiring unrestricted access", such as updating billing information or deleting the account, while an `IAM user` account is for a user who "performs daily tasks" such as using AWS services. 
-> 3. At this stage you can only login to the `Root user` account. In the next episode you will create an IAM account which you will use to create and manage your instance.
+> ## Types of user
+> 1. The login page will give you the option to login either as the **Root user** or as an **IAM user** --- IAM stands for Identity Access Managment. 
+> 2. The Root user account is for the owner of the account who "performs tasks requiring unrestricted access", such as updating billing information or deleting the account, while an IAM user account is for a user who "performs daily tasks" such as using AWS services. 
+> 3. At this stage you can only login to the Root user account. In the next episode you will create an IAM account which you will use to create and manage your instance.
 {: .callout}
 
-Login to your `Root user` account by entering the email address that you used to open your account in step 1. 
+Login to your **Root user** account by entering the email address that you used to open your account in step 1. 
 
-Press **Next** button. You will be prompted to (1) enter some characters by a "Security check" box and then your password, (2) select either the previous or the new version of the `Console Home` (please choose the new version), and (3) select your cookie preferences (select as you prefer). 
+Press **Next** button. You will be prompted to (1) enter some characters by a "Security check" box and then your password, (2) select either the previous or the new version of the **Console Home** (please choose the new version), and (3) select your cookie preferences (select as you prefer). 
 
 ![Caption.](../fig/using-acc04-signedin-options-services-and-cookies.PNG.jpg "The AWS Management console after you have logged in")
 
-Finally you will be logged in as `Root user`, able to use your account. We will first configure your account in the next episode.
+Finally you will be logged in as Root user, able to use your account. We will first configure your account in the next episode.
 
 > ## Exercise
 > As you eventually will logout from your account, please make a note of the address to log back in to the AWS Managment Console: 
-> `aws.amazon.com/console` or `https://aws.amazon.com/console`
+> aws.amazon.com/console or https://aws.amazon.com/console
 {: .challenge}
 
 
