@@ -13,27 +13,27 @@ keypoints:
 - "IAM accounts should be created and configured for daily use."
 ---
 > ## Prerequisites
-> To complete this episode:
-> - open your AWS account as described in the first episode of this lesson: [Create Your AWS Account](../01-create-your-account). 
-> - and login to your AWS account as described also in that episode (at the end). 
->   - click on this link [AWS Management Console](https://aws.amazon.com/console) to login to your account as `Root user` with the email and password you used to open your account. Login in another window so that you can switch between this window and the one to open by pressing the keys Alt-Tab simultaneously.
-- You will also need your mobile phone to add MFA authentication to your AWS account, see details below in the Introduction. However, **if you don't have a mobile phone, you can skip this step** and still use your AWS account.
+> To complete this episode you will need:
+> - to have opened your AWS account as described in the first episode of this lesson: [Create Your AWS Account](../01-create-your-account). 
+> - to be logged in to your AWS account as a **Root User** described also in that episode (at the end). 
+> - ideally, your mobile phone to add MFA authentication to your AWS account. However, **if you don't have a mobile phone, you can skip this step** and still use your AWS account.
 {: .prereq}
 
 # Introduction
+> ## Steps
 > These are the main steps you will follow to configure your AWS account:
 >
 > 1. **Change the default region of your account to Ireland**\
-> AWS services are provided through many regions around the world. Such a distributed structure allows optimising access to services within a region and is the basis to support fault tolerant services: if a service becomes unavailable in a region, another region can in principle provide that service. However, handling services over several regions must in general be configured by the user, meaning that, unless you do something to handle multiple-region services, only the services available in the region you are working on will be visible to you. When you open a new AWS account, a region is allocated by default. Your need to change the region of your account to Ireland because the Amazon Machine Image from which you will create your AWS instance is stored in the Ireland region. But you can change your account region any time you need to.  
+> AWS services are provided through many regions around the world and a region is allocated by default. You will need to change the region of your account to Ireland because the Amazon Machine Image from which you will create your AWS instance is stored in the Ireland region. But you can later change your account region if you wish.  
 >
 > 2. **Secure your AWS account**\
-> The account your created in the last episode is your `Root user` account and has no restrictions. It can perform any operation including closing the account.  It is considered a security best practice (1) to use the `Root user` account only for high-level admin tasks such as changing account settings (account name, email address) and activate Identification and Access Management (IAM) access (outlined in step 3.) among others, see [Tasks that require root user credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html#aws_tasks-that-require-root) for more information; (2) to secure the `Root user` account through a multi-factor authentication (MFA) scheme --- we will add MFA based on a mobile phone application; and (3) to create separate IAM user accounts for specific roles and functions as this makes it possible to specify what functions can be carried under a role and who can perform what roles, as outlined next. 
+> The account your created in the last episode is your Root user account and can perform any operation including closing the account. It is best practice to use the Root user account only for high-level administration and to create and an IAM user account for day-to-day work. It is also best practice to secure the Root user account with multi-factor authentication (MFA).
 >
 > 3. **Create an IAM user account to create and manage your instance**\
-> IAM user accounts should be created with specific roles and functions for day-to-day use as this enables tracking responsibility for resource usage. IAM user accounts are created as follows. User Groups are created with one or more security policies, each policy being a set of specific permissions (allowed operations: read, write, delete ..) on speficied resources.  IAM user accounts are then created and attached to a User Group, thus conveying the group permissions to the account user. But don't worry. To create and manage your instance you don't need anything too complex. We  are going to create a user group with a predefined security policy and a user account in that group. 
+> IAM user accounts are attached to a **User Group** that has a set of specific permissions (such as reading, writing and deleting) on specified resources. We will create a User Group with predefined permissions and a IAM user account in that group. 
 >
 > 4. **Create and alias for your account id**.\
-> Your `Root user` account id is a 12-digit number that is difficult to remember for most people. We are going to create an alias that is easy to remember. This is convenient because IAM users login to a web address that includes that account id, for example:  https://123456789012.signin.aws.amazon.com/console. With an alias, say, myaws, the login address will be https://myaws.signin.aws.amazon.com/console wich is easier to remember. Of course the alias must be unique because the account is worlwide accessible. If your alias is already taken, try to use something less common like https://vivamexico.signin.aws.amazon.com/console.
+> Your Root user account id is a 12-digit number that is difficult to remember. We are going to create an alias that is easier to remember. This is especially useful because the alias will replace the 12-digit number in the web address for logging in to your account. 
 {: .callout}
 
 ## 1. Change the default region of your account to Ireland
