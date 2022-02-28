@@ -41,7 +41,7 @@ keypoints:
 Once you have logged to your AWS Root user account, your browser will display a page showing the default region in the top right. This may be **N. Virginia** or another default.
 You need to change the region to **Europe (Ireland)  eu-west-1** using the drop-down menu. Your browswer will redirect to the AWS servers in the selected region.
 
-![Caption.](../fig/config-acc/ca01-signedin-options-services-and-cookies.jpg Browser showing N. Virginia as the region for the account in the top right")
+![Caption.](../fig/config-acc/ca01-signedin-options-services-and-cookies.jpg "Browser showing N. Virginia as the region for the account in the top right")
 
 > ## Note
 > You can change the region any time you need. 
