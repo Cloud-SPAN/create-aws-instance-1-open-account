@@ -38,70 +38,58 @@ keypoints:
 
 ## 1. Change the default region of your account to Ireland
 
-Once you have logged to your AWS `Root user` account, your browser will display a page/screen like the one below.
+Once you have logged to your AWS Root user account, your browser will display a page showing the default region in the top right. This may be **N. Virginia** or another default.
+You need to change the region to **Europe (Ireland)  eu-west-1** using the drop-down menu. Your browswer will redirect to the AWS servers in the selected region.
 
-In the page below, in the `aws navigation bar` (the long, dark bar just below the gray navigation bar at the top), the default region being shown to the right is `N. Virginia`. The default region of your account may be different and it's OK.
+![Caption.](../fig/config-acc/ca01-signedin-options-services-and-cookies.jpg Browser showing N. Virginia as the region for the account in the top right")
 
-To change your default region to `Ireland`, please click on the region drop-down menu icon, the little white triangle next to `N. Virginia`. A list of AWS regions will pop up. Scroll down the list with the mouse until you find the region `Europe (Ireland)  eu-west-1` and click on it. That's it.
-
-![Caption.](../fig/config-acc/ca01-signedin-options-services-and-cookies.jpg "Caption 2.")
-
-> ### Notes:
-> 1. You can change the region any time you need. 
-> 2. When you change the region, the address in the `browser navigation bar` will also change as you will be redirected to AWS servers in the selected region. Give it a go: change to a few regions and check the address in the `browser navigation bar`. Remeber to set Ireland as the default region at the end.
+> ## Note
+> You can change the region any time you need. 
 {: .callout}
 
-## 2. Secure your AWS `Root user` account
+## 2. Secure your AWS **Root user** account
 
-We now are going to add multi-factor authentication (MFA) to your `Root user` account as an extra security mechanism. This mechanism requires to download an app to your mobile phone, as described below. 
+We now are going to add multi-factor authentication (MFA) to your Root user account as an extra security mechanism. This requires you to download an app to your mobile phone, as described below. 
 
-**If you don't have a mobile phone** don't worry. Just skip this step and try to use your AWS `Root user` account only from your personal computer or trusted computers. Please go to step 3.
-
-In the search box within the `aws navigation bar`,  please type `iam` and press `Enter`. 
-
-In the page that appears (titled) "IAM Dashboard" (below), click on the gray button labelled `Add MFA`.
-
-![Caption.](../fig/config-acc/ca02-root-user-requires-mfa1.jpg "Caption 2.")
-
-In the page that appears "Your Security Credentials", click on the blue button labelled `Activate MFA`.
-
-![Caption.](../fig/config-acc/ca03-root-user-activate-mfa.jpg "Caption 2.")
-
-In the page that appears "Manage MFA device", select "Virtual MFA device" (if not selected already) and click on the blue button `Continue`.
-
-![Caption.](../fig/config-acc/ca04-root-user-choose-mfa-device.jpg "Caption 2.")
-
-The page below "Set up virtual MFA device" will appear and that means **setting up your mobile as MFA device**. So before proceeding, you need to (1) install in your mobile phone the app that is going to manage MFA authentication, and (2) register your phone-app with AWS by scanning a QR code. Please follow the instructions below the page.
-![Caption.](../fig/config-acc/ca05-root-user-setup-mfa-device.jpg "Caption 2.")
-
-> ### Setting up virtual MFA device 
-> - There are various MFA apps you can use in your mobile. We have installed and tried Duo Mobile and Google Authenticator and both work the same way, as described shortly. If you want to use another MFA app, look for Virtual MFA Applications in this page [AWS MFAs](https://aws.amazon.com/iam/features/mfa/) --- hopefully they will work the same; otherwise use any of those two.
-> - If you have Duo Mobile or Google Authenticator already installed, go to the next step. Otherwise install one of them in your mobile phone through your Google's Play Store or Apple's App Store app. Once you have installed an  MFA app in your mobile, continue with:
-> - In your computer, in the page above, click on the blue text `Show QR code`.
-> - In your mobile, run/open your MFA app and once ready:
->   - Press `+ Add` in Duo Mobile or `+` in Google Authenticator 
->   - Then press `Use QR code` in Duo Mobile or `Scan a QR code` in Google Authenticator; both will open your camera to scan a QR code.
->   - Point your mobile phone camera to your computer screen showing the QR code to scan; zoom in/out your mobile so that the QR code in your computer screen gets into the a sort offrame in your mobile screen. 
-> - Once the scan is successful, the MFA in your mobile is going to show a number for 30 seconds or so, and then another number for the same time, and so on until you close it. This behaviour is for Duo Mobile and Google Authenticator.
-> - Of those numbers shown in your mobile MFA, you need to enter two consecutive numbers into the fields `MFA Code 1` and `MFA Code 2` in the page above in your computer. You may need to **scroll down to see** `MFA Code 2`. **NB: enter the numbers with no space between them** even if they are shown with a space in your mobile.
-> - Then  click on the blue button `Assign MFA`. 
+> ## No mobile phone?
+> If you don't have a mobile phone, don't worry, you can skip this step and go straight to **3. Create an IAM user account to create and manage your instance**
+> If you are not using MFA it is best to use your AWS Root user account only from your personal computer or trusted computer.
 {: .callout}
 
-After that you will see this screen:
+Type **iam** in the AWS search box and press Enter. You will be presented with the "IAM Dashboard". Click on **Add MFA**.
 
-![Caption.](../fig/config-acc/ca06-root-user-setup-mfa-device2.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca02-root-user-requires-mfa1.jpg "The 'IAM Dashboard' showing the Add MFA button.")
 
-Once you click on the blue botton `Close`, you will see the page "Your Security Credentials" (below). 
+On the page that appears, "Your Security Credentials", click **Activate MFA**.
 
-This is the page where you can remove an MFA authentication. This may be necessary if you change your MFA application or mobile phone, etc. --- you will have to delete the old MFA authentication and create a new one. You delete an MFA authentication by clicking on the blue text `Manage` to the right of the MFA authentication you want to remove (see the page below). You will then be given the option to remove it and to confirm the removal.
+![Caption.](../fig/config-acc/ca03-root-user-activate-mfa.jpg "The 'Your Security Credentials' page showing the Activate MFA button")
 
-![Caption.](../fig/config-acc/ca07-root-user-setup-mfa-device-done.jpg "Caption 2.")
+A pop-up window called "Manage MFA device" will appear. Select **Virtual MFA device** and **Continue**.
 
-You get to this page ("Your Security Credentials") as follows:
-- In the search box within the (dark) `aws navigation bar`, you will type `iam` and press `Enter` (as you did at the start of this step). 
-- The page "IAM Dashboard" will appear, and you will click on the text in blue `My security credentials` which is on the right navigation menu about the middle of the page. You will then see the page "Your Security Credentials".
+![Caption.](../fig/config-acc/ca04-root-user-choose-mfa-device.jpg "The 'Manage MFA device' pop-up window showing Virtual MFA device selected.")
 
-With MFA authentication, every time you login to your `Root user` account, your will be asked to enter your password, an MFA code number you must read from your mobile by opening the MFA app (then close it), and possibly some characters you must read from a Security check box.  
+You will now be presented with a pop-up called "Set up a virtual MFA device". Don't select anything at the moment.
+
+![Caption.](../fig/config-acc/ca05-root-user-setup-mfa-device.jpg "The 'Set up a virtual MFA device' pop-up")
+
+To set up your mobile as MFA device you will need a Virtual MFA app on your mobile phone. We have tested Duo Mobile and Google Authenticator and give instructions for both but you may already be using another app. AWS lists some options: [AWS MFAs](https://aws.amazon.com/iam/features/mfa/).
+
+**If you do not have a Virtual MFA app on your mobile phone:**
+Go to the app store on your phone, search for Duo Mobile *or* Google Authenticator, and install it.
+
+Once you have installed an MFA app in your mobile:
+- Return to the "Set up a virtual MFA device" pop-up on your computer and choose **Show QR code**.
+- Open the MFA app on your phone
+  - Press **+ Add** in Duo Mobile or **+** in Google Authenticator 
+  - Press **Use QR code** in Duo Mobile or **Scan a QR code** in Google Authenticator. Your camera will open to scan a QR code.
+  - Point your camera at your computer screen showing the QR code to scan. You may need to adjust the zoom for the scan to occur.
+- Once the scan is successful, the MFA will display a number for about 30 seconds, and then another number for the same time, and so on until you close it. 
+- Of those numbers shown in your mobile MFA, you need to enter two consecutive numbers into the fields **MFA Code 1** and **MFA Code 2** on the "Set up a virtual MFA device" pop-up on your computer. You may need to scroll down to see MFA Code 2. **NB: enter the numbers with no space between them** even if they are shown with a space in your mobile.
+- Click on **Assign MFA**. 
+
+You will see a success message which you can close.
+
+Every time you login to your Root user account, you will be asked to enter your password and an MFA code number you must read from your mobile by opening the MFA app.
 
 ## 3. Create an IAM user account to create and manage your instance
 
