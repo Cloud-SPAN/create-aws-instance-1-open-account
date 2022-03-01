@@ -136,9 +136,9 @@ You will be presented with a page that says "Add user - Set permissions". The **
 ![Caption.](../fig/config-acc/ca17-iam-user-add-to-group.jpg "The 'Add user - Set permissions' page showing 'Add user to group' selected.")
 
 Adding a tag - or keyword - for a user is optional. You don't need to tag your user account for the time being. It is useful when you are managing multiple user accounts.
-Click on**Next: Review**. This will display the options chosen for the user account for review. If these are correct **Create user**
+Click **Next: Review**. This will display the options chosen for the user account for review. If these are correct click **Create user**
 
-![Caption.](../fig/config-acc/ca18-iam-user-review.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca18-iam-user-review.jpg "The review user account page")
 
 In the page that appears "Add user - Success" (below), there is some information that your will need later when you login to your IAM account as described shortly, please:
 
