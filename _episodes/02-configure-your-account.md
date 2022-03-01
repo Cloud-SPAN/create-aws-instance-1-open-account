@@ -53,7 +53,7 @@ You need to change the region to **Europe (Ireland)  eu-west-1** using the drop-
 We now are going to add multi-factor authentication (MFA) to your Root user account as an extra security mechanism. This requires you to download an app to your mobile phone, as described below. 
 
 > ## No mobile phone?
-> If you don't have a mobile phone, don't worry, you can skip this step and go straight to **3. Create an IAM user account to create and manage your instance**
+> If you don't have a mobile phone, don't worry, you can skip this step and go straight to **3. Create an IAM user account to create and manage your instance**.  
 > If you are not using MFA it is best to use your AWS Root user account only from your personal computer or trusted computer.
 {: .callout}
 
@@ -94,64 +94,49 @@ Every time you login to your Root user account, you will be asked to enter your 
 
 ## 3. Create an IAM user account to create and manage your instance
 
-We are going to create an IAM user account with which you will create and manage your AWS instance in the next lesson. Recall (from the Introduction above) that IAM User Groups are created with one or more security policies, and then IAM user accounts are created and attached to one o more User Groups. 
+We are going to create an IAM user account with which you will create and manage your AWS instance in the next lesson. This means first creating an IAM User Groups with one or more security policies, and then IAM user accounts within that User Group.
 
-Thus we are going to create first a user group called **Administrators**, then a user account called **YourName** (your actual name or the name you prefer), and finally attach the account to the group. As this is the first IAM group and account to be created, we need to do this with the `Root user` account, but then it will be possible to do it with the IAM account we will create because it will have Administrator privileges.
+We will create a user group called **Administrators**, then a user account called **YourName** (your actual name), and finally attach the account to the group. As this is the first IAM group and account to be created, we need to do this with the Root user account, but then it will be possible to do it with the IAM account we will create because it will have Administrator privileges.
 
 #### **Create the user group**
 
-Go to the IAM Dashboard page. In the search box within the (dark) `aws navigation bar`, type `iam` and press `Enter`. 
+Go to the IAM Dashboard page by typing **iam** in the AWS search box and pressing Enter. One the IAM Dashboard, click on "User groups" under "Access Management" on the left. Then **Create group**
 
-In the page that appears (titled) “IAM Dashboard” (below), on the left side navigation bar, under Access Management, click on "User groups".
-![Caption.](../fig/config-acc/ca11-iam-dashboard.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca11-iam-user-create-group-btton.jpg "The IAM Dashboard showing the User groups option under Access Management on the left and the Create group button on the left.")
 
-In the page that appears "User Groups", click on the blue button "Create group" on the right: 
-![Caption.](../fig/config-acc/ca11-iam-user-create-group-btton.jpg "Caption 2.")
+The "Create user group" page will appear. Type "Administrators" in the "User group name" box but **don't press** Enter.  Scroll down until you see the section "Attach permissions policy - *Optional*". This section has a search box and a list of different policies.
 
-In the page that appears "Create user group", in the "User group name" box, enter Administrators  (as shown) but **don't press** `Enter` please. 
+Then type "administratoraccess" in the search box and press Enter.
 
-![Caption.](../fig/config-acc/ca12-iam-user-name-group-box.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca13-iam-user-attach-policy1.jpg "The Attach permissions policies - Optional panel with 'administratoraccess' typed into the search box")
 
-Scroll down with the mouse until you see the section "Attach permissions policy - Optional". 
+This will bring the "AdministratorAccess" policy to the top of the list. Check the box next to that policy and **Create group**. The screen displayed after creating the group may indicate it is loading users --- it's OK, ignore it.
 
-Then type administratoraccess and press `Enter` in the search box as shown below.
+You now have a user group called **Administrators**
 
-![Caption.](../fig/config-acc/ca13-iam-user-attach-policy1.jpg "Caption 2.")
-
-After you have pressed `Enter`, the screen content will be updated showing the "AdministratorAccess" policy at the top see page below. 
-
-Please check the box next to that policy as shown below and then click on the blue button `Create group`.
-
-![Caption.](../fig/config-acc/ca14-iam-user-create-group.jpg "Caption 2.")
-
-The screen displayed after creating the group (below) may show like it is loading users --- it's OK, ignore it.
-
-![Caption.](../fig/config-acc/ca15-iam-user-group-created.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca15-iam-user-group-created.jpg "A list of the User groups in the account showing that there is only one user group called Administrators.")
 
 #### **Create the user and add it to the group**
 
-To create your IAM user account, in the last page displayed after creating the user group (or go to the IAM Dashboard page as instructed above), in the left side navigation bar (under the heading "Access management"), please click on Users. 
+The next step is to create your IAM user account. Under "Access Management" on the left, click on "Users".
 
-The page titled "Users" will be displayed with a blue button labelled `Add users` on the right. Click on it please.
+The page titled "Users" will be displayed. Click on **Add users**. 
+You can now set user details by:
+- typing your user name (a single word) 
+- checking the "Password - AWS Management Console access" box
+- then checking "Autogenerated password" and "User must create a new password at next sign-in" as checked.
 
-In the page that appears "Add user - Set user details" (below), enter your user name (a single word) and check the box next to the option "Password - AWS Management Console access" --- **once you check the box** the two last options shown below will pop up in your screen.  
+Then **Next: Permissions**
 
-Set the options that popped up as they popped up, namely: "Autogenerated password" and "User must create a new password at next sign-in" as checked.
+![Caption.](../fig/config-acc/ca16-iam-user-add-name.jpg "The Add User section showing a user name ('me') typed into the User name box and the 'Password - AWS Management Console access' box checked")
+![Caption.](../fig/config-acc/ca16-iam-user-add-name2.jpg "and the 'Autogenerated password' and 'User must create a new password at next sign-in' options as checked. The Next: Permissions button is also shown")
 
-Then click on the blue button `Next: Permissions`.
+You will be presented with a page that says "Add user - Set permissions". The **Add user to group** option should be set. Leave it set. Check the box next to the group Administrators and then **Next: Tags**
 
-![Caption.](../fig/config-acc/ca16-iam-user-add-name.jpg "Caption 2.")
-![Caption.](../fig/config-acc/ca16-iam-user-add-name2.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca17-iam-user-add-to-group.jpg "The 'Add user - Set permissions' page showing 'Add user to group' selected.")
 
-In the page that appears "Add user - Set permissions" (below), note that the option at the top, "Set permissions", is set (highlighted in blue) to "Add user to group". Leave it so and check the box next to the group Administrators. Then click on the blue botton `Next: Tags` at the bottom.
-
-![Caption.](../fig/config-acc/ca17-iam-user-add-to-group.jpg "Caption 2.")
-
-In the screen that appears "Add user - Add tags (optional)" (not shown), you can add tags (key-value pairs) to the user account you are creating, which would be rather useful if you were handling many users and you would like to search for them based on their skills in order to assign tasks. For example, you could use the key "programming languages" and then add values like Python, JavaScript, depending on the experience of the user whose account you are creating.
-
-You don't need tags for the time being. Please click on the blue botton `Next: Review` at the bottom and the page below, "Review", will be displayed which summarises the options d chosen for the account to be created.
-
-Click on the blue button `Create user` at the bottom on the right.
+Adding a tag - or keyword - for a user is optional. You don't need to tag your user account for the time being. It is useful when you are managing multiple user accounts.
+Click on**Next: Review**. This will display the options chosen for the user account for review. If these are correct **Create user**
 
 ![Caption.](../fig/config-acc/ca18-iam-user-review.jpg "Caption 2.")
 
