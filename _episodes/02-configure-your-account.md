@@ -140,54 +140,43 @@ Click **Next: Review**. This will display the options chosen for the user accoun
 
 ![Caption.](../fig/config-acc/ca18-iam-user-review.jpg "The review user account page")
 
-In the page that appears "Add user - Success" (below), there is some information that your will need later when you login to your IAM account as described shortly, please:
+You will see a message indicating you have successfully added a user. This message includes information you will need.
 
-- click on the gray button `Download .csv` on the left to download the file which contains your account login details. 
-- take note of the web address (url) in blue: https://123456789012.signin.aws.amazon.com/console  --- the 12-digit number will be your actual account id.
+- Write down the web address: https://xxxxxxxxxxxx.signin.aws.amazon.com/console  --- where xxxxxxxxxxxx is the 12-digit number of your account id.
+- Download the  .csv file which contains your account login details: your username, your randomly generated password, and the web address where you will login to as IAM user 
+- Close the success message.
  
-See comments and instructions after the page.
+![Caption.](../fig/config-acc/ca19-iam-user-created.jpg "The message indicating you have successfully aded a user showing the web address you need to note down and the button to download the .csv file")
 
-![Caption.](../fig/config-acc/ca19-iam-user-created.jpg "Caption 2.")
+> ## What's in the file?
+> The file you downloaded is a *comma separated value* (CSV) file that you can open in any text editor. The content is something like this:
+> 
+> `me,0ji)8[bN3{F-X!h,,,https://xxxxxxxxxxxx.signin.aws.amazon.com/console`
+> 
+> In this line, the first field, `me`, is the user name, the second field (after the first coma), `0ji)8[bN3{F-X!h`, is the password (yours will be different of course), and the last field, `https://xxxxxxxxxxxx.signin.aws.amazon.com/console`, is the web address to login. The third and fourth fields are empty.
 
+**NB**: the first time you login you will have to change the password. 
+{: .callout}
 
-The file you downloaded is a *comma separated value* (CSV) file that contains your username, your randomly generated password, and the web address where you will login to as IAM user; its content is something like this:
-                             
-`me,0ji)8[bN3{F-X!h,,,https://123456789012.signin.aws.amazon.com/console`
+You should see the User account you have just created listed. "Never" in "Last activity" means you have not yet logged in.
 
-In this line, the first field, `me`, is the user name, the second field (after the first coma), `0ji)8[bN3{F-X!h`, is the password, and the last field (there aren't 3rd and 4th fields), `https://123456789012.signin.aws.amazon.com/console`, is the web address to login.
-
-**NB**: the first time you login you will have to change the password.
-
-Click on the `Close` button and the screen that appears "Users" (below) will show the user you have just created and "Never" under "Last activity" (in the middle of the page), meaning that you have not yet logged in to your account. 
-
-![Caption.](../fig/config-acc/ca19-iam-user-created2-after.jpg "Caption 2.")
-
-Open a new tab in your browser and go to the login web address of your new account (https://...signin.aws.amazon.com/console). A page like the following one will appear:
-
-![Caption.](../fig/config-acc/ca20-iam-user-login.jpg "Caption 2.")
-
-In the page above, the field "account id" is filled because you provided it in the web address. Note that you can provide an alias instead of the 12-digit number. We are going to set up an alias next.
+Open a **new** tab in your browser and go to the login web address of your new account (https://xxxxxxxxxxxx.signin.aws.amazon.com/console) and log in with the username and password from the .csv file you downloaded.
 
 ## 4. Create and alias for your IAM user acount
 
-This is the last step to configure your account and is simple and will make it easier for your to login to your account.
+A 12-digit number can be difficult to remember so we can create an alias which is easier to remember. The alias can be used to log in to your account.
 
-Being logged in into your account (either with your `Root user` account or your IAM account), go to the Dashboad page: type `iam` and press `Enter` in the search box within the `aws navigation` bar.
+Type **iam** in the AWS search box and press Enter to go to the "IAM Dashboard".
 
-In the page that appears "The Dashboard", on the right side navigation bar, under the heading "AWS Account", is your "Account id" and further below your "Account Alias". Both are the same because you have not set up an alias yet. 
+On the right of the Dashboard, under the heading "AWS Account", is your "Account id" and further below your "Account Alias". Both are the same because you have not set up an alias yet. 
 
-To set it, click on the blue text "Edit" and a screen like the following one will appear:
+Click on "Edit" then enter the alias you want to use. This might be some version of your name. Note the new sign-in URL. Click **Save changes**.
 
-![Caption.](../fig/config-acc/ca22-url-alias-create.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca22-url-alias-create.jpg "Pop-up called 'Create alias for AWS account xxxxxxxxxxxx'. ")
 
-Type the alias you want for your account, say, myawsalias, and click on the blue button `Save changes`. 
+You can now login to your account using either the web address: the one with your 12-digit account number or the one with your alias.
 
-You can now login to your account in both web addresses:
-https://123yours9012.signin.aws.amazon.com/console   and
-
-https://myawsalias.signin.aws.amazon.com/console
-
-That's all about configuring your AWS account for day-to-day use. Of course, there is much more you can do. But the above is enough for you to create and manage your AWS instance. 
+You have now configured your AWS account for day-to-day use. 
 
 
 
