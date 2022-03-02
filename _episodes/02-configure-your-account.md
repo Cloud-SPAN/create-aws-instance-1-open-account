@@ -175,7 +175,7 @@ Click on "Edit" then enter the alias you want to use. This might be some version
 
 ![Caption.](../fig/config-acc/ca22-url-alias-create.jpg "Pop-up called 'Create alias for AWS account xxxxxxxxxxxx'. ")
 
-You can now login to your account using either the web address: the one with your 12-digit account number or the one with your alias.
+You can now login to your account using either web address: the one with your 12-digit account number or the one with your alias.
 
 You have now configured your AWS account for day-to-day use. 
 
