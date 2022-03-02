@@ -148,14 +148,15 @@ You will see a message indicating you have successfully added a user. This messa
  
 ![Caption.](../fig/config-acc/ca19-iam-user-created.jpg "The message indicating you have successfully aded a user showing the web address you need to note down and the button to download the .csv file")
 
+
 > ## What's in the file?
 > The file you downloaded is a *comma separated value* (CSV) file that you can open in any text editor. The content is something like this:
 > 
 > `me,0ji)8[bN3{F-X!h,,,https://xxxxxxxxxxxx.signin.aws.amazon.com/console`
 > 
 > In this line, the first field, `me`, is the user name, the second field (after the first coma), `0ji)8[bN3{F-X!h`, is the password (yours will be different of course), and the last field, `https://xxxxxxxxxxxx.signin.aws.amazon.com/console`, is the web address to login. The third and fourth fields are empty.
-
-**NB**: the first time you login you will have to change the password. 
+> 
+> **NB**: the first time you login you will have to change the password. 
 {: .callout}
 
 You should see the User account you have just created listed. "Never" in "Last activity" means you have not yet logged in.
