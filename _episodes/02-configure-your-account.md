@@ -23,16 +23,16 @@ keypoints:
 > ## Steps
 > These are the main steps you will follow to configure your AWS account:
 >
-> 1. **Change the default region of your account to Ireland**\
+> 1. **Change the default region of your account to Ireland.**\
 > AWS services are provided through many regions around the world and a region is allocated by default. You will need to change the region of your account to Ireland because the Amazon Machine Image from which you will create your AWS instance is stored in the Ireland region. But you can later change your account region if you wish.  
 >
-> 2. **Secure your AWS account**\
+> 2. **Secure your AWS account.**\
 > The account your created in the last episode is your Root user account and can perform any operation including closing the account. It is best practice to use the Root user account only for high-level administration and to create and an IAM user account for day-to-day work. It is also best practice to secure the Root user account with multi-factor authentication (MFA).
 >
-> 3. **Create an IAM user account to create and manage your instance**\
+> 3. **Create an IAM user account to create and manage your instance.**\
 > IAM user accounts are attached to a **User Group** that has a set of specific permissions (such as reading, writing and deleting) on specified resources. We will create a User Group with predefined permissions and a IAM user account in that group. 
 >
-> 4. **Create and alias for your account id**.\
+> 4. **Create an alias for your account id**.\
 > Your Root user account id is a 12-digit number that is difficult to remember. We are going to create an alias that is easier to remember. This is especially useful because the alias will replace the 12-digit number in the web address for logging in to your account. 
 {: .callout}
 

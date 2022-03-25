@@ -49,7 +49,7 @@ You will need to enter your email and password and a name for your account --- y
 > 2. the name of an account helps to identify the account once the user is logged in, as it is not uncommon for AWS users to have more than one AWS account.
 {: .callout}
 
-Once you have entered your email, password and account name, click on **Continue (step 1 of 5)** and a complete the **Security check** by typing the characters displayed into the box. Click on **Continue (step 1 of 5)**
+Once you have entered your email, password and account name, click on **Continue (step 1 of 5)** and complete the **Security check** box that will pop up by typing the characters displayed into the box. Click on **Continue (step 1 of 5)** again.
 
 ## 2. Select your account type (Personal) and enter your contact information.
 The next page asks you **How do you plan to use AWS?**. Choose **Personal** and give your name, phone number and address. Then read the *AWS Customer Agreement* and tick the checkbox **I have read and agree to the terms of the AWS Customer Agreement**. Finally, click on **Continue (step 2 of 5)** to move to step 3.
@@ -122,7 +122,7 @@ Finally you will be logged in as Root user, able to use your account. We will fi
 
 > ## Exercise
 > As you eventually will logout from your account, please make a note of the address to log back in to the AWS Managment Console: 
-> aws.amazon.com/console or https://aws.amazon.com/console
+> **aws.amazon.com/console**  or  **https://aws.amazon.com/console**
 {: .challenge}
 
 

@@ -8,5 +8,5 @@ You will use the **AWS Console** to open and configure your AWS account, and als
 
 Note that there are other means to access AWS services, including (1) the AWS command line interface (CLI), (2) software development kits (SDKs or libraries) for use with a programming language such as Python, Java, JavaScript, etc., and (3) blueprints which are textual descriptions of cloud resources and their dependencies. The main advantage of these methods is that they facilitate the automation of management tasks over multiple resources, as is required in production-like environments. The main disadvantage is that more time is required to learn them. 
 
-The rationale for using the AWS Console in this course is twofold: (1) the initial configuration of a new AWS account can only be done through the AWS Console, and (2) as you will only be using one AWS instance, there is no need for automating management tasks.
+The rationale for using the AWS Console in this course is twofold: (1) the initial configuration of a new AWS account can only be done through the AWS Console, and (2) you don't need to automate instance management tasks as you will only be using one or a few AWS instances.
 
