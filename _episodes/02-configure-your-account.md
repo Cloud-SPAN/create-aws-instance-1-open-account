@@ -53,7 +53,7 @@ You need to change the region to **Europe (Ireland)  eu-west-1** using the drop-
 We now are going to add multi-factor authentication (MFA) to your Root user account as an extra security mechanism. This requires you to download an app to your mobile phone, as described below. 
 
 > ## No mobile phone?
-> If you don't have a mobile phone, don't worry, you can skip this step and go straight to **3. Create an IAM user account to create and manage your instance**
+> If you don't have a mobile phone, don't worry, you can skip this step and go straight to **3. Create an IAM user account to create and manage your instance**.  
 > If you are not using MFA it is best to use your AWS Root user account only from your personal computer or trusted computer.
 {: .callout}
 
@@ -94,115 +94,90 @@ Every time you login to your Root user account, you will be asked to enter your 
 
 ## 3. Create an IAM user account to create and manage your instance
 
-We are going to create an IAM user account with which you will create and manage your AWS instance in the next lesson. Recall (from the Introduction above) that IAM User Groups are created with one or more security policies, and then IAM user accounts are created and attached to one o more User Groups. 
+We are going to create an IAM user account with which you will create and manage your AWS instance in the next lesson. This means first creating an IAM User Groups with one or more security policies, and then IAM user accounts within that User Group.
 
-Thus we are going to create first a user group called **Administrators**, then a user account called **YourName** (your actual name or the name you prefer), and finally attach the account to the group. As this is the first IAM group and account to be created, we need to do this with the `Root user` account, but then it will be possible to do it with the IAM account we will create because it will have Administrator privileges.
+We will create a user group called **Administrators**, then a user account called **YourName** (your actual name), and finally attach the account to the group. As this is the first IAM group and account to be created, we need to do this with the Root user account, but then it will be possible to do it with the IAM account we will create because it will have Administrator privileges.
 
 #### **Create the user group**
 
-Go to the IAM Dashboard page. In the search box within the (dark) `aws navigation bar`, type `iam` and press `Enter`. 
+Go to the IAM Dashboard page by typing **iam** in the AWS search box and pressing Enter. One the IAM Dashboard, click on "User groups" under "Access Management" on the left. Then **Create group**
 
-In the page that appears (titled) “IAM Dashboard” (below), on the left side navigation bar, under Access Management, click on "User groups".
-![Caption.](../fig/config-acc/ca11-iam-dashboard.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca11-iam-user-create-group-btton.jpg "The IAM Dashboard showing the User groups option under Access Management on the left and the Create group button on the left.")
 
-In the page that appears "User Groups", click on the blue button "Create group" on the right: 
-![Caption.](../fig/config-acc/ca11-iam-user-create-group-btton.jpg "Caption 2.")
+The "Create user group" page will appear. Type "Administrators" in the "User group name" box but **don't press** Enter.  Scroll down until you see the section "Attach permissions policy - *Optional*". This section has a search box and a list of different policies.
 
-In the page that appears "Create user group", in the "User group name" box, enter Administrators  (as shown) but **don't press** `Enter` please. 
+Then type "administratoraccess" in the search box and press Enter.
 
-![Caption.](../fig/config-acc/ca12-iam-user-name-group-box.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca13-iam-user-attach-policy1.jpg "The Attach permissions policies - Optional panel with 'administratoraccess' typed into the search box")
 
-Scroll down with the mouse until you see the section "Attach permissions policy - Optional". 
+This will bring the "AdministratorAccess" policy to the top of the list. Check the box next to that policy and **Create group**. The screen displayed after creating the group may indicate it is loading users --- it's OK, ignore it.
 
-Then type administratoraccess and press `Enter` in the search box as shown below.
+You now have a user group called **Administrators**
 
-![Caption.](../fig/config-acc/ca13-iam-user-attach-policy1.jpg "Caption 2.")
-
-After you have pressed `Enter`, the screen content will be updated showing the "AdministratorAccess" policy at the top see page below. 
-
-Please check the box next to that policy as shown below and then click on the blue button `Create group`.
-
-![Caption.](../fig/config-acc/ca14-iam-user-create-group.jpg "Caption 2.")
-
-The screen displayed after creating the group (below) may show like it is loading users --- it's OK, ignore it.
-
-![Caption.](../fig/config-acc/ca15-iam-user-group-created.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca15-iam-user-group-created.jpg "A list of the User groups in the account showing that there is only one user group called Administrators.")
 
 #### **Create the user and add it to the group**
 
-To create your IAM user account, in the last page displayed after creating the user group (or go to the IAM Dashboard page as instructed above), in the left side navigation bar (under the heading "Access management"), please click on Users. 
+The next step is to create your IAM user account. Under "Access Management" on the left, click on "Users".
 
-The page titled "Users" will be displayed with a blue button labelled `Add users` on the right. Click on it please.
+The page titled "Users" will be displayed. Click on **Add users**. 
+You can now set user details by:
+- typing your user name (a single word) 
+- checking the "Password - AWS Management Console access" box
+- then checking "Autogenerated password" and "User must create a new password at next sign-in" as checked.
 
-In the page that appears "Add user - Set user details" (below), enter your user name (a single word) and check the box next to the option "Password - AWS Management Console access" --- **once you check the box** the two last options shown below will pop up in your screen.  
+Then **Next: Permissions**
 
-Set the options that popped up as they popped up, namely: "Autogenerated password" and "User must create a new password at next sign-in" as checked.
+![Caption.](../fig/config-acc/ca16-iam-user-add-name.jpg "The Add User section showing a user name ('me') typed into the User name box and the 'Password - AWS Management Console access' box checked")
+![Caption.](../fig/config-acc/ca16-iam-user-add-name2.jpg "and the 'Autogenerated password' and 'User must create a new password at next sign-in' options as checked. The Next: Permissions button is also shown")
 
-Then click on the blue button `Next: Permissions`.
+You will be presented with a page that says "Add user - Set permissions". The **Add user to group** option should be set. Leave it set. Check the box next to the group Administrators and then **Next: Tags**
 
-![Caption.](../fig/config-acc/ca16-iam-user-add-name.jpg "Caption 2.")
-![Caption.](../fig/config-acc/ca16-iam-user-add-name2.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca17-iam-user-add-to-group.jpg "The 'Add user - Set permissions' page showing 'Add user to group' selected.")
 
-In the page that appears "Add user - Set permissions" (below), note that the option at the top, "Set permissions", is set (highlighted in blue) to "Add user to group". Leave it so and check the box next to the group Administrators. Then click on the blue botton `Next: Tags` at the bottom.
+Adding a tag - or keyword - for a user is optional. You don't need to tag your user account for the time being. It is useful when you are managing multiple user accounts.
+Click **Next: Review**. This will display the options chosen for the user account for review. If these are correct click **Create user**
 
-![Caption.](../fig/config-acc/ca17-iam-user-add-to-group.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca18-iam-user-review.jpg "The review user account page")
 
-In the screen that appears "Add user - Add tags (optional)" (not shown), you can add tags (key-value pairs) to the user account you are creating, which would be rather useful if you were handling many users and you would like to search for them based on their skills in order to assign tasks. For example, you could use the key "programming languages" and then add values like Python, JavaScript, depending on the experience of the user whose account you are creating.
+You will see a message indicating you have successfully added a user. This message includes information you will need.
 
-You don't need tags for the time being. Please click on the blue botton `Next: Review` at the bottom and the page below, "Review", will be displayed which summarises the options d chosen for the account to be created.
-
-Click on the blue button `Create user` at the bottom on the right.
-
-![Caption.](../fig/config-acc/ca18-iam-user-review.jpg "Caption 2.")
-
-In the page that appears "Add user - Success" (below), there is some information that your will need later when you login to your IAM account as described shortly, please:
-
-- click on the gray button `Download .csv` on the left to download the file which contains your account login details. 
-- take note of the web address (url) in blue: https://123456789012.signin.aws.amazon.com/console  --- the 12-digit number will be your actual account id.
+- Write down the web address: https://xxxxxxxxxxxx.signin.aws.amazon.com/console  --- where xxxxxxxxxxxx is the 12-digit number of your account id.
+- Download the  .csv file which contains your account login details: your username, your randomly generated password, and the web address where you will login to as IAM user 
+- Close the success message.
  
-See comments and instructions after the page.
-
-![Caption.](../fig/config-acc/ca19-iam-user-created.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca19-iam-user-created.jpg "The message indicating you have successfully aded a user showing the web address you need to note down and the button to download the .csv file")
 
 
-The file you downloaded is a *comma separated value* (CSV) file that contains your username, your randomly generated password, and the web address where you will login to as IAM user; its content is something like this:
-                             
-`me,0ji)8[bN3{F-X!h,,,https://123456789012.signin.aws.amazon.com/console`
+> ## What's in the file?
+> The file you downloaded is a *comma separated value* (CSV) file that you can open in any text editor. The content is something like this:
+> 
+> `me,0ji)8[bN3{F-X!h,,,https://xxxxxxxxxxxx.signin.aws.amazon.com/console`
+> 
+> In this line, the first field, `me`, is the user name, the second field (after the first coma), `0ji)8[bN3{F-X!h`, is the password (yours will be different of course), and the last field, `https://xxxxxxxxxxxx.signin.aws.amazon.com/console`, is the web address to login. The third and fourth fields are empty.
+> 
+> **NB**: the first time you login you will have to change the password. 
+{: .callout}
 
-In this line, the first field, `me`, is the user name, the second field (after the first coma), `0ji)8[bN3{F-X!h`, is the password, and the last field (there aren't 3rd and 4th fields), `https://123456789012.signin.aws.amazon.com/console`, is the web address to login.
+You should see the User account you have just created listed. "Never" in "Last activity" means you have not yet logged in.
 
-**NB**: the first time you login you will have to change the password.
-
-Click on the `Close` button and the screen that appears "Users" (below) will show the user you have just created and "Never" under "Last activity" (in the middle of the page), meaning that you have not yet logged in to your account. 
-
-![Caption.](../fig/config-acc/ca19-iam-user-created2-after.jpg "Caption 2.")
-
-Open a new tab in your browser and go to the login web address of your new account (https://...signin.aws.amazon.com/console). A page like the following one will appear:
-
-![Caption.](../fig/config-acc/ca20-iam-user-login.jpg "Caption 2.")
-
-In the page above, the field "account id" is filled because you provided it in the web address. Note that you can provide an alias instead of the 12-digit number. We are going to set up an alias next.
+Open a **new** tab in your browser and go to the login web address of your new account (https://xxxxxxxxxxxx.signin.aws.amazon.com/console) and log in with the username and password from the .csv file you downloaded.
 
 ## 4. Create and alias for your IAM user acount
 
-This is the last step to configure your account and is simple and will make it easier for your to login to your account.
+A 12-digit number can be difficult to remember so we can create an alias which is easier to remember. The alias can be used to log in to your account.
 
-Being logged in into your account (either with your `Root user` account or your IAM account), go to the Dashboad page: type `iam` and press `Enter` in the search box within the `aws navigation` bar.
+Type **iam** in the AWS search box and press Enter to go to the "IAM Dashboard".
 
-In the page that appears "The Dashboard", on the right side navigation bar, under the heading "AWS Account", is your "Account id" and further below your "Account Alias". Both are the same because you have not set up an alias yet. 
+On the right of the Dashboard, under the heading "AWS Account", is your "Account id" and further below your "Account Alias". Both are the same because you have not set up an alias yet. 
 
-To set it, click on the blue text "Edit" and a screen like the following one will appear:
+Click on "Edit" then enter the alias you want to use. This might be some version of your name. Note the new sign-in URL. Click **Save changes**.
 
-![Caption.](../fig/config-acc/ca22-url-alias-create.jpg "Caption 2.")
+![Caption.](../fig/config-acc/ca22-url-alias-create.jpg "Pop-up called 'Create alias for AWS account xxxxxxxxxxxx'. ")
 
-Type the alias you want for your account, say, myawsalias, and click on the blue button `Save changes`. 
+You can now login to your account using either web address: the one with your 12-digit account number or the one with your alias.
 
-You can now login to your account in both web addresses:
-https://123yours9012.signin.aws.amazon.com/console   and
-
-https://myawsalias.signin.aws.amazon.com/console
-
-That's all about configuring your AWS account for day-to-day use. Of course, there is much more you can do. But the above is enough for you to create and manage your AWS instance. 
+You have now configured your AWS account for day-to-day use. 
 
 
 
