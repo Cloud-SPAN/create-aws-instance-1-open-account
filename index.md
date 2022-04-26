@@ -2,7 +2,7 @@
 layout: lesson
 root: .
 ---
-This lesson teaches you how to create (open) an AWS account and how to configure it according to best practices as suggested by AWS.
+This lesson teaches you how to open (create) your AWS account and how to configure it according to best practices as suggested by AWS.
  
 You will use the **AWS Console** to open and configure your AWS account, and also to create and manage your instance in the next lesson. You can access all AWS services with the **AWS Console** rather easily through choosing (clicking on) options with the mouse and entering specific data with the keyboard. 
 
