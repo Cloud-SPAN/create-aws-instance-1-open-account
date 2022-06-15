@@ -9,8 +9,9 @@ objectives:
 - Secure your AWS account. 
 - Configure your AWS account for daily work.   
 keypoints:
-- "The Root account should only be used for high-level admin tasks."
-- "IAM accounts should be created and configured for daily use."
+- The Root account should only be used for high-level admin tasks.
+- IAM accounts should be created and configured for daily use.
+- Your IAM user account has the permissions of the (account) AdministratorAccess policy, and is hence sufficient for most practical purposes.  
 ---
 > ## Prerequisites
 > To complete this episode you will need:
@@ -107,7 +108,7 @@ Go to the IAM Dashboard page by typing **iam** in the AWS search box and pressin
 
 ![Caption.](../fig/config-acc/ca11-iam-user-create-group-btton.jpg "The IAM Dashboard showing the User groups option under Access Management on the left and the Create group button on the left.")
 
-In the page that appears, "Create user group", type "Administrators" in the box "User group name" but **don't press** Enter. Scroll down until you see the section "Attach permissions policy - *Optional*". This section has a search box and a list of different policies.
+In the page that appears, "Create user group", type "Administrators" in the box "User group name" but **don't press** Enter yet. Scroll down until you see the section "Attach permissions policy - *Optional*". This section has a search box and a list of different policies.
 
 Type "administratoraccess" in the search box and press Enter.
 
@@ -204,5 +205,3 @@ On the page that appears:
 - Click on Update.
 
 You have now configured your AWS account for day-to-day use.  
-
-You can use your IAM user account for most practical purposes.  
