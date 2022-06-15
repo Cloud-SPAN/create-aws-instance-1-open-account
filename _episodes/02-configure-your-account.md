@@ -30,10 +30,13 @@ keypoints:
 > The account your created in the last episode is your Root user account and can perform any operation including closing the account. It is best practice to use the Root user account only for high-level administration and to create and an **IAM** (Identity Access Managment) user account for day-to-day work. It is also best practice to secure the Root user account with multi-factor authentication (MFA).
 >
 > 3. **Create an IAM user account to create and manage your instance.**\
-> IAM user accounts are attached to a **User Group** that has a set of specific permissions (such as reading, writing and deleting) on specified resources. We will create a User Group with predefined permissions and a IAM user account in that group. 
+> IAM user accounts are attached to a **User Group** that has a set of specific permissions (such as reading, writing and deleting) on specified resources. We will create a User Group with predefined permissions and an IAM user account in that group. 
 >
 > 4. **Create an alias for your account id**.\
 > Your Root user account id is a 12-digit number that is difficult to remember. We are going to create an alias that is easier to remember. This is especially useful because the alias will replace the 12-digit number in the web address for logging in to your account as IAM user. 
+>
+> 5. **Grant your IAM user account the permissions to access the Billing Dashboard**.\
+> The Billing Dashboard of your account is only accessible to the Root user by default. As you will mostly be using your IAM user account, it is convenient that you can check your bills and related information with this account too. We are going set on the permissions that enable your IAM user account to access the Billing Dashboard. 
 {: .callout}
 
 ## 1. Change the default region of your account to Ireland
@@ -182,7 +185,24 @@ Click on **Create** next to "Account Alias" and then enter the alias you want to
 
 You can now login to your account using either web address: the one with your 12-digit account number or the one with your alias.
 
-You have now configured your AWS account for day-to-day use. 
+## 5. Grant your IAM user account the permissions to access the Billing Dashboard
 
+To grant your IAM user account the permissions to access the Billing Dashboard, go to the Account Settings page as follows: (1) on the navigation bar at the top, on the far right, click on your account name (or number), and (2) on the drop-down menu that appears, click on Account --- see the figure:
 
+![Caption.](../fig/config-acc/ca23-root-setup-to-access-billing-info.png "Accessing the Acount settgins page")
 
+On the page that appears:
+
+- Scroll down until you see the heading:
+
+&nbsp; &nbsp; &nbsp; &nbsp; **IAM User and Role Access to Billing Information**
+
+- To the right of the heading, click on Edit.
+
+- Check **Activate IAM Access**.
+
+- Click on Update.
+
+You have now configured your AWS account for day-to-day use.  
+
+You can use your IAM user account for most practical purposes.  
