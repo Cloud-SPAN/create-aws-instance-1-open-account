@@ -22,27 +22,29 @@ keypoints:
 {: .prereq}
 
 # Outline
-These are the main steps you will follow to open your AWS account:
-
-1. Sign-up to AWS with your email (as username) and password.
-
-2. Select your account type (**Personal**) and enter your contact information.
-
-3. Enter Billing Information: your credit card details.
-
-4. Confirm your identity to AWS through a phone call or SMS message.
-
-5. Select support plan (**Basic**) and complete sign-up.
-
-6. Login to your AWS account.
+> ## Steps
+> These are the main steps you will follow to open your AWS account:
+>
+> 1. [**Sign-up to AWS with your email** (as username) **and password**](#1-sign-up-to-aws-with-your-email-and-password).
+>
+> 2. [**Select your account type** (Personal) **and enter your contact information**](#2-select-your-account-type-personal-and-enter-your-contact-information).
+> 
+> 3. [**Enter Billing Information: your credit card details**](#3-enter-billing-information-your-credit-card-details).
+> 
+> 4. [**Confirm your identity to AWS through a phone call or SMS message**](#4-confirm-your-identity-to-aws-through-a-phone-call-or-sms-message).
+> 
+> 5. [**Select support plan** (Basic) **and complete sign-up**](#5-select-support-plan-basic-and-complete-sign-up).
+> 
+> 6. [**Login to your AWS account**](#6-login-to-your-aws-account).
+{: .callout}
 
 ## 1. Sign-up to AWS with your email and password
 
-Go to the **sign-up** page by clicking on this link [AWS sign-up](https://portal.aws.amazon.com/billing/signup#/start) --- for convenience, right click on the link and, in the menu that pops up, left click on **Open link in new window**; you can switch between this browser window and the sign-up page window to be opened by pressing the keys Alt-Tab simultaneously. 
+Go to the AWS **sign-up** page by clicking on this link [AWS sign-up](https://portal.aws.amazon.com/billing/signup#/start) --- for convenience, right click on the link and, in the menu that pops up, left click on **Open link in new window** so that you can switch between this browser window and the sign-up page window to be opened by pressing the keys Alt-Tab simultaneously. 
 
-You will need to enter your email and password and a name for your account --- you can change the name of your account later.
+In the AWS sign-up page (shown below), you need to enter your email and password and a name for your account --- you can change the name of your account later.
 
-![Caption.](../fig/open-acc04-signup-page-filled.PNG.jpg "The Sign up for AWS page showing the boxes for your email address, password and account name")
+![Caption.](../fig/open-acc04-signup-page-filled.PNG.jpg "The Sign up for AWS page showing the boxes for your email address, password and account name"){: width="900px"}
 
 > ## New accounts
 > 1. new accounts are all granted the one-year Free Tier (message on the left).
@@ -56,7 +58,7 @@ The next page asks you **How do you plan to use AWS?** Choose **Personal** and e
 
 Then read the *AWS Customer Agreement* and check the box **I have read and agree to the terms of the AWS Customer Agreement**. Finally, click on **Continue (step 2 of 5)** to move to step 3.
 
-![Caption.](../fig/open-acc07-signup-page-contact-details1.PNG.jpg "The Sign up for AWS page the selection between the business and personal accounts and boxes for you name and phone number")
+![Caption.](../fig/open-acc07-signup-page-contact-details1.PNG.jpg "The Sign up for AWS page the selection between the business and personal accounts and boxes for you name and phone number"){: width="900px"}
 
 > ## Account types
 > 1. There is no functional difference between a business account and a personal account. Both have access to all AWS services and both support managing sub-accounts which, as we will see in the next episode, are more convenient for every day work. 
@@ -69,25 +71,30 @@ Now you are asked for your credit card details. Note that your credit card will 
 
 Please note the Secure verification message on the left: AWS will make a small charge (equivalent to $1 USD) on your card to verify it, but the charge will be returned to you in 3-5 days.
 
-![Caption.](../fig/open-acc10-signup-page-filling-card-details.PNG.jpg "The Sign up for AWS page showing the boxes billing information")
+![Caption.](../fig/open-acc10-signup-page-filling-card-details.PNG.jpg "The Sign up for AWS page showing the boxes billing information"){: width="900px"}
 
-As part of the **verification process** a pop-up window from your bank or financial institution may appear and ask you to verify the AWS transaction.  Choose the phone you want to receive the passcode, click on **Confirm**, and once you receive the passcode enter it as required. 
+As part of the **verification process**, a pop-up window from your bank or financial institution may appear and ask you to verify the AWS transaction.  Choose the phone you want to receive the passcode, click on **Confirm**, and once you receive the passcode enter it as required. 
 
-![Caption.](../fig/open-acc11-signup-page-validating-card.jpg "the pop up window asking you to verify the transaction")
+![Caption.](../fig/open-acc11-signup-page-validating-card.jpg "the pop up window asking you to verify the transaction"){: width="900px"}
 
 ## 4. Confirm your identity to AWS through a phone call or SMS message
 
 You now need to confirm your identity to AWS through an SMS message or a phone call to the phone number that will be associated with your account (we used the same phone number we entered in step 2). 
 
-Please select SMS message or phone call, enter your phone number and the characters in the security check box, and finally click **Send SMS (step 4 of 5)**. After you enter the code, another page will be displayed for your to select a support plan and you will receive the SMS or a phone call within a few seconds.
+Please select:
+- SMS message or phone call
+- enter your phone number and the characters in the security check box 
+- and finally click **Send SMS (step 4 of 5)** --- you receive a message with a verification code)
 
-![Caption.](../fig/open-acc13signup-page-verify-with-SMSmessage.jpg "The identity confirmation page showing options to receive verification code - Text message being selected")
+After you enter the verification code, another page will be displayed for your to select a support plan and you will receive the SMS or a phone call within a few seconds.
+
+![Caption.](../fig/open-acc13signup-page-verify-with-SMSmessage.jpg "The identity confirmation page showing options to receive verification code - Text message being selected"){: width="900px"}
 
 ## 5. Select support plan (**Basic**) and complete sign-up
 
 You must now select a support plan. Select the **Basic support** plan and click **Complete sign-up**.  The Basic support plan is free and you don't need more if this is your first AWS account.
 
-![Caption.](../fig/open-acc16signup-page-select-support-plan3.png "The support pan selection page showing the Basic Support - Free option being selected")
+![Caption.](../fig/open-acc16signup-page-select-support-plan3.png "The support pan selection page showing the Basic Support - Free option being selected"){: width="900px"}
 
 The congratulations page will then be displayed.
 
@@ -99,13 +106,13 @@ You will also receive three emails from AWS with the Subjects:
 
 These emails have links to useful information and resources.
 
-![Caption.](../fig/open-acc17signup-page-finished-congratulations.jpg "The congratulations page. It includes a button to Go to the AWS Management Console")
+![Caption.](../fig/open-acc17signup-page-finished-congratulations.jpg "The congratulations page. It includes a button to Go to the AWS Management Console"){: width="900px"}
 
 ## 6. Login to your AWS account
 
 From the congratulations page click **Go to the AWS Management Console** where you will be asked to sign in.
 
-![Caption.](../fig/using-acc01-signingin-as-root-page.PNG.jpg "The sign in page showing the options to choose Root user or IAM user")
+![Caption.](../fig/using-acc01-signingin-as-root-page.PNG.jpg "The sign in page showing the options to choose Root user or IAM user"){: width="900px"}
 
 > ## Types of user
 > 1. The login page will give you the option to login either as the **Root user** or as an **IAM user** --- IAM stands for Identity Access Managment. 
@@ -117,7 +124,7 @@ Login to your **Root user** account by entering the email address that you used 
 
 Press **Next** button. You will be prompted to (1) enter some characters by a "Security check" box and then your password, (2) select either the previous or the new version of the **Console Home** (please choose the new version), and (3) select your cookie preferences (select as you prefer). 
 
-![Caption.](../fig/using-acc04-signedin-options-services-and-cookies.PNG.jpg "The AWS Management console after you have logged in")
+![Caption.](../fig/using-acc04-signedin-options-services-and-cookies.PNG.jpg "The AWS Management console after you have logged in"){: width="900px"}
 
 Finally you will be logged in as Root user, able to use your account. We will first configure your account in the next episode.
 
