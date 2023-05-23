@@ -81,20 +81,24 @@ As part of the **verification process**, a pop-up window from your bank or finan
 
 You now need to confirm your identity to AWS through an SMS message or a phone call to the phone number that will be associated with your account (we used the same phone number we entered in step 2). 
 
-Please select:
+In the page "Confirm your identity" (shown below), please select:
 - SMS message or phone call
-- enter your phone number and the characters in the security check box 
-- and finally click **Send SMS (step 4 of 5)** --- you receive a message with a verification code)
+- enter your phone number 
+- the characters in the security check box 
+- and click **Send SMS (step 4 of 5)** 
 
-After you enter the verification code, another page will be displayed for your to select a support plan and you will receive the SMS or a phone call within a few seconds.
+After a few seconds you will receive an SMS message (or a phone call and will be provided) with a **validation code**.  
+
+Enter the code as required and continue below.
 
 ![Caption.](../fig/open-acc13signup-page-verify-with-SMSmessage.jpg "The identity confirmation page showing options to receive verification code - Text message being selected"){: width="900px"}
+![Caption.](../fig/open-acc13signup-page-verify-with-SMS2PNG.jpg "The identity confirmation page showing options to receive verification code - Text message being selected"){: width="900px"}
 
-## 5. Select support plan (**Basic**) and complete sign-up
+## 5. Select support plan (Basic) and complete sign-up
 
 You must now select a support plan. Select the **Basic support** plan and click **Complete sign-up**.  The Basic support plan is free and you don't need more if this is your first AWS account.
 
-![Caption.](../fig/open-acc16signup-page-select-support-plan3.png "The support pan selection page showing the Basic Support - Free option being selected"){: width="900px"}
+![Caption.](../fig/open-acc16signup-page-select-support-plan3.png "The support pan selection page showing the Basic Support - Free option being selected"){: width="500px"}
 
 The congratulations page will then be displayed.
 
@@ -120,13 +124,17 @@ From the congratulations page click **Go to the AWS Management Console** where y
 > 3. At this stage you can only login to the Root user account. In the next episode you will create an IAM account which you will use to create and manage your instance.
 {: .callout}
 
-Login to your **Root user** account by entering the email address that you used to open your account in step 1. 
+Login to your **Root user** account: enter the **email address** that you used to open your account in step 1  and press **Next** button. 
 
-Press **Next** button. You will be prompted to (1) enter some characters by a "Security check" box and then your password, (2) select either the previous or the new version of the **Console Home** (please choose the new version), and (3) select your cookie preferences (select as you prefer). 
-
-![Caption.](../fig/using-acc04-signedin-options-services-and-cookies.PNG.jpg "The AWS Management console after you have logged in"){: width="900px"}
+You will be prompted to enter: 
+- enter some characters by a "Security check" box 
+- enter your password, 
+- if you are asked to select either the previous or the new version of the **Console Home**, please choose the new version, and 
+- select your cookie preferences (select as you prefer). 
 
 Finally you will be logged in as Root user, able to use your account. We will first configure your account in the next episode.
+
+![Caption.](../fig/using-acc04-signedin-options-services-and-cookies.PNG.jpg "The AWS Management console after you have logged in"){: width="900px"}
 
 > ## Exercise
 > As you eventually will logout from your account, please make a note of the address to log back in to the AWS Managment Console: 
