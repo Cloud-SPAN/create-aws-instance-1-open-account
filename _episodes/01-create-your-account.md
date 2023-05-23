@@ -44,7 +44,7 @@ Go to the AWS **sign-up** page by clicking on this link [AWS sign-up](https://po
 
 In the AWS sign-up page (shown below), you need to enter your email and password and a name for your account --- you can change the name of your account later.
 
-![Caption.](../fig/open-acc04-signup-page-filled.PNG.jpg "The Sign up for AWS page showing the boxes for your email address, password and account name"){: width="900px"}
+![Caption.](../fig/using-acc04-signedin-options-services-and-cookies.PNG.jpg "The Sign up for AWS page showing the boxes for your email address, password and account name"){: width="900px"}
 
 > ## New accounts
 > 1. new accounts are all granted the one-year Free Tier (message on the left).
@@ -126,8 +126,8 @@ From the congratulations page click **Go to the AWS Management Console** where y
 
 Login to your **Root user** account: enter the **email address** that you used to open your account in step 1  and press **Next** button. 
 
-You will be prompted to enter: 
-- enter some characters by a "Security check" box 
+You will be prompted to: 
+- enter some characters into a "Security check" box 
 - enter your password, 
 - if you are asked to select either the previous or the new version of the **Console Home**, please choose the new version, and 
 - select your cookie preferences (select as you prefer). 
