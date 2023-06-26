@@ -38,6 +38,9 @@ keypoints:
 >
 > 5. [**Grant your IAM user account the permissions to access the Billing Dashboard**](#5-grant-your-iam-user-account-the-permissions-to-access-the-billing-dashboard).\
 > The Billing Dashboard of your account is only accessible to the Root user by default. As you will mostly be using your IAM user account, it is convenient that you can check your bills and related information with this account too. We are going set on the permissions that enable your IAM user account to access the Billing Dashboard. 
+>
+> 6. [**Close (delete) your AWS account**](#6-close-delete-your-aws-account).\
+> Once you don't need your instance, you may want to close your AWS account in order to ensure that you are not charged any cost. This section shows you how to close your account.
 {: .callout}
 
 ## 1. Change the default region of your account to Ireland
@@ -204,7 +207,7 @@ To grant your IAM user account the permissions to access the Billing Dashboard, 
 - on the navigation bar at the top, on the far right, click on your "**account name**" (or number)
 - on the drop-down menu that appears, click on **Account** --- see the figure:
 
-![Caption.](../fig/config-acc/ca23-root-setup-to-access-billing-info.png "Accessing the Acount settgins page"){: width="900px"}
+![Caption.](../fig/config-acc/ca23-root-setup-to-access-billing-info.png "Accessing the Acount settings page"){: width="900px"}
 
 On the page that appears:
 
@@ -219,3 +222,26 @@ On the page that appears:
 - Click on **Update**.
 
 You have now configured your AWS account for day-to-day use.  
+
+## 6. Close (delete) your AWS account
+
+This section shows you how to close your AWS account. Please don't do this if you just opened your account to create your instance --- but you may want to do this once you don't need your instance and related resources in order to ensure that your account is not charged any cost.
+
+You can open a new AWS account whenever you want to. 
+
+To close your AWS account:
+
+- login with your Root user account --- the one you login to with your email and password (you cannot delete an AWS account with an IAM account for daily use).
+
+- delete your instance and any other resources you may have created such as login keys or IP addresses.
+
+- go to the Account page: 
+  - click on your "**account name**" (or number) drop-down menu on the top right ("myyorkaws" in the figure below).
+  - on the drop-down menu that appears, click on Account --- see the figure.
+
+![Accessing the Acount settings page.](../fig/config-acc/ca24-closing-aws-account01.png "Accessing the Acount settings page"){: width="900px"}
+
+You will now be presented with the "Account" page. Scroll down this page until you see the heading "Close account" and click on it.  It is a drop-down menu and once you click on it it will show a message and the "Close account" button on the bottom right, see figure below. You may want to take note of the points in the message. Click that button to close your account.
+
+![Accessing the Close account option.](../fig/config-acc/ca25-closing-aws-account02.png "Accessing the Close account option"){: width="900px"}
+
